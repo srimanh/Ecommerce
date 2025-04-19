@@ -5,9 +5,7 @@ const connectDatabase = () => {
     mongoose
         .connect(process.env.DB_URL, {
             useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true,
-            useFindAndModify: false,
+            useUnifiedTopology: true
         }) 
         .then((data) => {
             console.log(`MongoDB connected with server: ${data.connection.host}`);
